@@ -20,6 +20,17 @@ public class GameManager : MonoBehaviour
     public float secondState;
     public Canvas ammoCanvas;
     public Text ammoText;
+    private int coins;
+    private int tickets;
+
+    public int getCoins()
+    {
+        return coins;
+    }
+    public void updateCoins(int num)
+    {
+        coins = coins + num;
+    }
 
     public float raiseStateCooldown = 5f, startRaiseState = 30f;
         
