@@ -1,0 +1,107 @@
+# Available requirements:
+#
+#	SKILLS
+#	#skill = 2
+#
+#	LEADER
+#	leader = scientist
+#	leader = admiral
+#	leader = general
+#	leader = ruler
+#	leader = governor
+#	
+#	MILITARY SHIPS
+#	shipclass_military = 1
+#	
+#	CIVILIAN SHIPS
+#	shipclass_constructor = 2
+#	shipclass_science_ship = 1
+#	shipclass_colonizer = 2
+#	
+#	ARMIES
+#	shipclass_transport = 1
+#	assault_armies = 2
+#	defense_armies = 1
+#	
+#	STATIONS
+#	research_station = yes
+#	mining_station = yes
+#	observation_station = yes
+#
+
+#Derelict Ship
+special_project = {
+	key = "DERELICT_SHIP_PROJECT"
+	#cost = 0
+	days_to_research = 20
+	tech_department = society_technology #DOES NOTHING OTHER THAN SHOWING AN ICON
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit
+	icon = "gfx/interface/icons/situation_log/situation_log_debris.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 2
+	}
+	
+	on_success = {
+		random_list = {
+			20 = {
+				ship_event = { id = anomaly.4012 }
+				modifier = {
+					factor = 0
+					exists = owner
+					owner = {
+						count_playable_country = {
+							count = 0
+							limit = {
+								is_country_type = default
+								NOT = { has_established_contact = prev }
+								NOT = { is_same_value = prev }
+							}
+						}
+					}
+				}
+			}
+			50 = { ship_event = { id = anomaly.4011 } }
+			30 = { ship_event = { id = anomaly_failure.4011 } }
+		}
+	}
+}
+
+#AI Admiral
+special_project = {
+	key = "AI_ADMIRAL_PROJECT"
+	#cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	timelimit = 1080
+	picture = GFX_evt_sapient_AI
+	icon = "gfx/interface/icons/situation_log/situation_log_ai.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 2
+	}
+
+	on_success = {
+		ship_event = { id = anomaly.4031 }
+	}
+	on_fail = {
+		country_event = { id = anomaly_failure.4031 }
+	}
+}
+
+#special_project = {
+#	key = "TESTING_PROJECT"
+#	#cost = 0
+#	days_to_research = 10
+#	tech_department = society_technology
+#	timelimit = -1
+#	picture = GFX_evt_ship_in_orbit

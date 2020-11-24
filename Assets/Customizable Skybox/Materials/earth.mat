@@ -1,0 +1,106 @@
+t = society_technology
+	timelimit = -1
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+
+	location = no
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			random_list = {
+				70 = { country_event = { id = anomaly.4136 } }
+				30 = { country_event = { id = anomaly_failure.4136 } }
+			}
+		}
+	}
+}
+
+# Master's Writings - Politics
+special_project = {
+	key = "MASTERS_WRITINGS_PHILOSOPHY"
+	cost = 1200
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+
+	location = no
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			random_list = {
+				70 = { country_event = { id = anomaly.4141 } }
+				30 = { country_event = { id = anomaly_failure.4136 } }
+			}
+		}
+	}
+}
+
+# Master's Writings - Diplomacy
+special_project = {
+	key = "MASTERS_WRITINGS_DIPLOMACY"
+	cost = 1200
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+
+	location = no
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			random_list = {
+				70 = { country_event = { id = anomaly.4151 } }
+				30 = { country_event = { id = anomaly_failure.4136 } }
+			}
+		}
+	}
+}
+
+# Master's Writings - War
+special_project = {
+	key = "MASTERS_WRITINGS_WAR"
+	cost = 1200
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_small_space_battle
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+
+	location = no
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			random_list = {
+				70 = { country_event = { id = anomaly.4166 } }
+				30 = { country_event = { id = anomaly_failure.4136 } }
+			}
+		}
+	}
+}
+
+# Getting into a vault guarded by beasts
+special_project = {
+	key = "CRYOPOD_FOUND_PROJECT"
+	#cost = 0
+	days_to_research = 100
+	tech_department = society_t

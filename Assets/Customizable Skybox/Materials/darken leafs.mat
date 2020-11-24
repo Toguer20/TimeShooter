@@ -1,0 +1,105 @@
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_constructor = 1
+	}
+
+	on_success = {
+		ship_event = { id = anomaly.4066 }
+	}
+	on_fail = {
+		country_event = { id = anomaly_failure.4066 }
+	}
+}
+
+# Abandoned Array
+special_project = {
+	key = "ABANDONED_ARRAY_PROJECT"
+	#cost = 0
+	days_to_research = 90
+	tech_department = engineering_technology
+	timelimit = -1
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		#shipclass_constructor = 1
+		shipclass_science_ship = 1
+	}
+
+	on_success = {
+		random_list = {
+			80 = { ship_event = { id = anomaly.4081 } }
+			20 = { ship_event = { id = anomaly_failure.4081 } }
+		}
+	}
+}
+
+# Alien Speed Ship
+special_project = {
+	key = "ALIEN_RACER_PROJECT"
+	#cost = 0
+	days_to_research = 45
+	tech_department = engineering_technology
+	timelimit = 1080
+	picture = GFX_evt_ship_in_orbit
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_constructor = 1
+	}
+
+	on_success = {
+		random_list = {
+			60 = { ship_event = { id = anomaly.4086 } }
+			#40 = { ship_event = { id = anomaly.4087 } }
+		}
+	}
+	on_fail = {
+		country_event = { id = anomaly_failure.4086 }
+	}
+}
+
+# Psionic Horses
+special_project = {
+	key = "PSIONIC_HORSES_PROJECT"
+	#cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_alien_nature
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 2
+	}
+
+	on_success = {
+		if = {
+			limit = {
+				from = {
+					owner = {
+						OR = {
+							has_ethic = "ethic_fanatic_xenophobe"
+							has_ethic = "ethic_fanatic_militarist"
+							has_ethic = "ethic_fanatic_egalitarian"
+							has_ethic = "ethic_xenophobe"
+							has_ethic = "ethic_militarist"
+						}
+					}
+				}
+			}
+			ship_event = { id = anomaly.4101 }
+		}
+		if = {
+			limit = {
+				from = {
