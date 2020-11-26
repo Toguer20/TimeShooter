@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MoveBehaviour))]
-public class Bullet : HitBehaviour
+public abstract class Bullet : HitBehaviour
 {
     public Weapon Owner { get; set; }
     private MoveBehaviour _moveBehaviour;
@@ -21,6 +21,7 @@ public class Bullet : HitBehaviour
     
     protected override void OnTriggerEnter(Collider other)
     {
+        Debug.Log("bala colisiona");
         base.OnTriggerEnter(other);
         Owner.GetBackBullet(this);
     }

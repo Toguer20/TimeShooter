@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public abstract class Target : MonoBehaviour, IHittable
+public abstract class Target : HealthBehavior
 {
     public static event Action<GameObject> Deleted = delegate { };
     protected int lifePoints = 1;
@@ -30,14 +30,15 @@ public abstract class Target : MonoBehaviour, IHittable
     {
         this.gameObject.SetActive(false);
     }
-    public virtual void GetHit(int damage)
+    public override void GetHit(int damage)
     {
-        lifePoints = (lifePoints - damage) < 0 ? 0 : (lifePoints - damage);
-        if (lifePoints == 0)
+        healthPoints = (healthPoints - damage) < 0 ? 0 : (healthPoints - damage);
+        if (healthPoints == 0)
         {
             animator.SetTrigger("destroy");
             particleeSystem.SetActive(true);
-            GetComponent<AudioSource>().Play();
+            Destroyed();
+            //GetComponent<AudioSource>().Play();
         }
     }
     public virtual void Destroyed()

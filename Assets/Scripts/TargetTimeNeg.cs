@@ -7,8 +7,9 @@ public class TargetTimeNeg : Target
     private float time = 3f;
     public override void GetHit(int damage)
     {
-        GetComponent<AudioSource>().clip = AudioManager.Instance.timeRemoveTarget;
+       // GetComponent<AudioSource>().clip = AudioManager.Instance.timeRemoveTarget;
         base.GetHit(damage);
+        Debug.Log("hit");
         GameManager.gm.SetTimer(time);
     }
 }
