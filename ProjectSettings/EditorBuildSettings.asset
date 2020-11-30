@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Samuel.unity
+    guid: 2c192e142d159db419cdf79bd8fa952d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 27dc41971f164204dbb602bfaacb862e,
       type: 2}
