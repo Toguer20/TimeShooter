@@ -33,11 +33,12 @@ public abstract class Target : HealthBehavior
     public override void GetHit(int damage)
     {
         healthPoints = (healthPoints - damage) < 0 ? 0 : (healthPoints - damage);
-        if (healthPoints == 0)
+        if (healthPoints <= 0)
         {
+            Debug.Log("destroyed");
             animator.SetTrigger("destroy");
             particleeSystem.SetActive(true);
-            Destroyed();
+            //Destroyed();
             //GetComponent<AudioSource>().Play();
         }
     }

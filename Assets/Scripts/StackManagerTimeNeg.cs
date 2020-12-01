@@ -7,9 +7,9 @@ public class StackManagerTimeNeg : StackManager
     public override void Awake()
     {
         base.Awake();
-        NumberOfObjects = 3;
-        startingNumObjects = 3;
-        incrementNumObjects = +3;
+        NumberOfObjects = 1;
+        startingNumObjects = 1;
+        incrementNumObjects = +1;
         while (ObjectsInGame < NumberOfObjects)
         {
             Instantiate(prefab);

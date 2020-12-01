@@ -7,8 +7,8 @@ public class StackManagerScorePos : StackManager
     public override void Awake()
     {
         base.Awake();
-        NumberOfObjects = 7;
-        startingNumObjects = 7;
+        NumberOfObjects = 1;
+        startingNumObjects = 1;
         incrementNumObjects = -1;
         while (ObjectsInGame < NumberOfObjects)
         {

@@ -39,7 +39,7 @@ public class Weapon : MonoBehaviour
                 bullet.transform.position = _shootPoint.position;
                 bullet.transform.LookAt(target);
                 _currentMagazine--;
-                GameManager.gm.setAmmoCanvas(_currentMagazine);
+            //    GameManager.gm.setAmmoCanvas(_currentMagazine);
                 _animator.SetTrigger("Shoot");
             }
             else
