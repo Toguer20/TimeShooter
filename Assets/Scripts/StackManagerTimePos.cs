@@ -7,8 +7,8 @@ public class StackManagerTimePos : StackManager
     public override void Awake()
     {
         base.Awake();
-        NumberOfObjects = 1;
-        startingNumObjects = 1;
+        NumberOfObjects = 3;
+        startingNumObjects = 3;
         incrementNumObjects = -1;
         while (ObjectsInGame < NumberOfObjects)
         {

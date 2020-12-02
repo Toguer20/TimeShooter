@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6950caa4d211f3543931557b2a0ae46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 60
+  initialHP: 60
   particleeSystem: {fileID: 1819214070993466411}
 --- !u!114 &5513464452220821525
 MonoBehaviour:

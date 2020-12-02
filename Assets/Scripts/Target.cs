@@ -6,7 +6,6 @@ using System;
 public abstract class Target : HealthBehavior
 {
     public static event Action<GameObject> Deleted = delegate { };
-    protected int lifePoints = 1;
     protected Animator animator;
     protected Vector3 originalPos;
     protected Vector3 trajectory;
@@ -19,7 +18,7 @@ public abstract class Target : HealthBehavior
     void OnEnable()
     {
         animator.SetTrigger("spawn");
-        lifePoints = 1;
+        HP = initialHP;
         GameManager.PlayAgain += Desactivate;
     }
     void OnDisable()
@@ -32,8 +31,8 @@ public abstract class Target : HealthBehavior
     }
     public override void GetHit(int damage)
     {
-        healthPoints = (healthPoints - damage) < 0 ? 0 : (healthPoints - damage);
-        if (healthPoints <= 0)
+        HP = (HP - damage) < 0 ? 0 : (HP - damage);
+        if (HP <= 0)
         {
             Debug.Log("destroyed");
             animator.SetTrigger("destroy");
