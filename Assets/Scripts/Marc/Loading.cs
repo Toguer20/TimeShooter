@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Loading : MonoBehaviour
 {
-    private float speed = 4f;
+    private float speed = 3f;
     void Start()
     {
         
