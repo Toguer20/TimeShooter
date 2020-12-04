@@ -10,6 +10,7 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene("Loading");
         auxescena=escena;
+        DontDestroyOnLoad(this.gameObject);
     }
     public void OnTriggerEnter2D(Collider2D loader)
     {
