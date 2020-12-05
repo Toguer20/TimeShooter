@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static event Action PlayAgain = delegate { };
-    [SerializeField] private float timer = 15f;
+    [SerializeField] private float timer;
     private int score;
     public Canvas ScoreCanvas;
     public Text ScoreText;
@@ -17,12 +17,21 @@ public class GameManager : MonoBehaviour
     public Text TimerText;
     public static GameManager gm;
     public GameObject GameOverObject;
-    public float secondState;
+    //public float secondState;
     public Canvas ammoCanvas;
     public Text ammoText;
     private int coins;
     private int tickets;
 
+
+    public int getTickets()
+    {
+        return tickets;
+    }
+    public void updateTickets(int num)
+    {
+        tickets = tickets + num;
+    }
     public int getCoins()
     {
         return coins;
@@ -43,8 +52,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<AudioSource>().clip = AudioManager.Instance.backgroundMusic;
-        GetComponent<AudioSource>().Play();
+      //  GetComponent<AudioSource>().clip = AudioManager.Instance.backgroundMusic;
+      // GetComponent<AudioSource>().Play();
         if (gm == null)
         {
             gm = gameObject.GetComponent<GameManager>();
