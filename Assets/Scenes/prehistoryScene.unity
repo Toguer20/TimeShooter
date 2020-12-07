@@ -1299,6 +1299,8 @@ MonoBehaviour:
   GameOverObject: {fileID: 1595043586}
   ammoCanvas: {fileID: 877464109}
   ammoText: {fileID: 1243443108}
+  coinText: {fileID: 0}
+  bucksText: {fileID: 0}
   raiseStateCooldown: 5
   startRaiseState: 30
 --- !u!4 &1475957221

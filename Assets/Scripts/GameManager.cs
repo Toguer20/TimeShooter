@@ -20,8 +20,10 @@ public class GameManager : MonoBehaviour
     //public float secondState;
     public Canvas ammoCanvas;
     public Text ammoText;
-    private int coins;
-    private int tickets;
+    public Text coinText;
+    public Text bucksText;
+    private int coins=0;
+    private int tickets=0;
 
 
     public int getTickets()
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     public void updateTickets(int num)
     {
         tickets = tickets + num;
+        bucksText.text = "Billetes: " + tickets;
     }
     public int getCoins()
     {
@@ -39,6 +42,17 @@ public class GameManager : MonoBehaviour
     public void updateCoins(int num)
     {
         coins = coins + num;
+        coinText.text= "Monedas: " + coins;
+    }
+    public void buyCoins()
+    {
+        if(tickets>0)
+        {
+            coins = coins + 10;
+            tickets--;
+            coinText.text = "Monedas: " + coins;
+            bucksText.text = "Billetes: " + tickets;
+        }
     }
 
     public float raiseStateCooldown = 5f, startRaiseState = 30f;

@@ -385,6 +385,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87812306}
     m_Modifications:
+    - target: {fileID: 3621655990445514457, guid: 475bd61d5052b014f96ad61feb3080b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4403350334358866391, guid: 475bd61d5052b014f96ad61feb3080b8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -399,6 +404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 227.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953819588624994207, guid: 475bd61d5052b014f96ad61feb3080b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5993328921855643201, guid: 475bd61d5052b014f96ad61feb3080b8,
         type: 3}
@@ -505,10 +515,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6196182426250096696, guid: 475bd61d5052b014f96ad61feb3080b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7238994395779358455, guid: 475bd61d5052b014f96ad61feb3080b8,
         type: 3}
       propertyPath: m_Name
       value: OptionsPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238994395779358455, guid: 475bd61d5052b014f96ad61feb3080b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 475bd61d5052b014f96ad61feb3080b8, type: 3}
@@ -811,7 +831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &321852275
 RectTransform:
   m_ObjectHideFlags: 0
